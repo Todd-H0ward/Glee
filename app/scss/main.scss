@@ -3,5 +3,100 @@
 @import "variables";
 @import "global";
 
+.header {
+    padding: 50px 0;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+    }
+    &__list-item:not(:first-child) {
+        margin-left: 30px;
+    }
+    &__list-link {
+        font-size: 15px;
+        @extend %Rubik-Medium;
+        text-decoration: none;
+        color: $links;
+    }
+}
+
+.user__nav {
+    display: flex;
+    &-link {
+        position: relative;
+        text-decoration: none;
+        background-color: #CCC;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:first-child {
+            margin-right: 20px;
+        }
+    }
+    &-link--gray {
+        background-color: #edf1f4;
+    }
+    &-link--blue {
+        background-color: #a3bbc8;
+    }
+    &-number {
+        color: $accent;
+        background-color: #fff;
+        @extend %DMSans-Medium;
+        font-size: 10px;
+        position: absolute;
+        font-weight: 400;
+        line-height: 1.7;
+        text-align: center;
+        padding: 0 5px;
+        border-radius: 50%;
+        top: -7px;
+        right: 25px;
+        z-index: 2;
+    }
+    &-link-group {
+        width: 180px;
+        height: 50px;
+        background-color: #fcd7b6;
+        position: relative;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: 20px;
+        &-item {
+            position: relative;
+            width: 90px;
+            display: flex;
+            justify-content: center;
+            z-index: 1;
+        }
+        &-first::after {
+            content: "";
+            position: absolute;
+            background-color: #fde7d3;
+            height: 30px;
+            width: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 90px;
+            display: block;
+            z-index: 10;
+        }
+    }
+}
 
 @import "media";

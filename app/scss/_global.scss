@@ -1,0 +1,10 @@
+body {
+    font-size: 16px;
+    @extend %Rubik-Regular;
+}
+
+.container {
+    max-width: 1830px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
