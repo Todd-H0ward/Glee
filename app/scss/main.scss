@@ -4,7 +4,7 @@
 @import "global";
 
 .header {
-    padding: 50px 0;
+    padding: 45px 0;
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -96,6 +96,105 @@
             display: block;
             z-index: 10;
         }
+    }
+}
+
+.footer {
+    &__logo {
+        display: block;
+        margin-bottom: 30px;
+    }
+}
+
+.footer-top {
+    padding: 80px 0 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    font-size: 14px;
+    &::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: #dae4e9;
+        position: absolute;
+        display: block;
+        bottom: 0;
+        margin-top: 75px;
+    }
+    &__column {
+        width: 200px;
+    }
+    &__subscribe {
+        width: 270px;
+    }
+    &__title {
+        color: #1f2044;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        @extend %DMSans-Bold;
+    }
+    &__link,
+    &__text {
+        color: $footer-link;
+        display: block;
+        line-height: 20px;
+        margin-bottom: 10px;
+        text-decoration: none;
+        @extend %Rubik-Regular;
+    }
+    &__form {
+        margin-top: 40px;
+        width: 270px;
+        display: flex;
+    }
+    &__input {
+        max-width: 170px;
+        width: 100%;
+        padding: 0 10px;
+        height: 40px;
+        background-color: $bg;
+        line-height: 1.5;
+        margin-right: 0;
+        flex: 1 1 auto;
+        &::placeholder {
+            color: #234969;
+            @extend %DMSans-Regular;
+        }
+    }
+    &__btn {
+        display: inline;
+        padding: 0 10px;
+        height: 40px;
+        color: #fff;
+        background-color: #a3bbc8;
+        @extend %DMSans-Regular;
+    }
+}
+
+.footer-bottom {
+    padding: 35px 0 40px;
+    display: flex;
+    justify-content: space-between;
+    &__text {
+        font-size: 14px;
+        @extend %Rubik-Regular;
+        color: $footer-link;
+    }
+    &__list {
+        display: flex;
+        color: $footer-link;
+    }
+    &__item:not(:last-child)::after {
+        content: "|";
+        margin: 13px;
+    }
+    &__link {
+        color: inherit;
+        font-size: 14px;
+        text-decoration: none;
     }
 }
 
